@@ -36,6 +36,26 @@ title: How I post to dev.to
 
     The response to this request is the only way to retrieve the article from the API before it is published.
 
+## Appendix: source code
+
+The contents of `article.py` are below. This reads the markdown file and outputs a suitable JSON object:
+
+<!-- embedme article.py -->
+
+```py
+from sys import argv
+from json import dumps
+
+with open(argv[-1]) as file_:
+    output = {"body_markdown": file_.read()}
+print(dumps({"article": output}))
+
+```
+
+I wrote a set of [tests for this code].
+
+[tests for this code]: https://github.com/maxwell-k/blog/blob/master/test_article.py
+
 ## Checklist
 
 - [ ] Cover image
