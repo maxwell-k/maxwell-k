@@ -27,7 +27,7 @@ title: How I post to dev.to
 
     To make publishing easier, each post in this repository is a directory corresponding to that ID.
 
-3.  Upload the article text:
+3.  Move to that directory and then upload the article text:
 
     ```sh
     python3 ../article.py index.md |
@@ -62,6 +62,7 @@ I wrote a set of [tests for this code].
 - [ ] Four tags
 - [ ] Proof read
 - [ ] Set `published: true`
+- [ ] Push to GitHub
 
 ## References
 
